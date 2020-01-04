@@ -1,0 +1,35 @@
+<div class="container">
+  <mat-horizontal-stepper #stepper>
+    <mat-step *ngFor="let item of questions" label="{{item.num}}">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{item.text}}</mat-card-title>
+
+        </mat-card-header>
+        <mat-card-content>
+          <div class="answers">
+            <mat-radio-group (change)="do($event, item.number)" #answer>
+              <mat-radio-button value="1">Very Bad</mat-radio-button>
+              <mat-radio-button value="2">Bad</mat-radio-button>
+              <mat-radio-button value="3">OK</mat-radio-button>
+              <mat-radio-button value="4">Good</mat-radio-button>
+              <mat-radio-button value="5">Very Good</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="next(stepper)">{{btnText}}</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+  <div *ngIf="!valid" class="error">
+    <div>You didnt answer questions :</div>
+    <div>
+      <span *ngFor="let item of missing">
+        {{item}}
+      </span>
+    </div>
+  </div>
+</div>

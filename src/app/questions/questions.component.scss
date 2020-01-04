@@ -1,0 +1,60 @@
+mat-horizontal-stepper{
+  background: none;
+}
+.mat-card-header-text {
+  width: 100% !important;
+}
+
+mat-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 400px;
+}
+
+
+mat-radio-group{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.answers{
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+::ng-deep .mat-step-header .mat-step-icon-selected  {
+  background-color: white;
+  color:black
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: white;
+  color:black
+}
+::ng-deep .mat-stepper-horizontal-line{
+  background-color: white;
+}
+::ng-deep .mat-step-icon-state-number .mat-step-icon{
+  margin-left: 40px;
+}
+button{
+  width:200px;
+}
+.error{
+  margin:0 auto;
+  width:220px;
+  background-color: white;
+  height: 170px;
+  padding: 22px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.valid p {
+  width:100%;
+}
